@@ -18,28 +18,56 @@ class CourseScreen extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [CourseTopicButton(), CourseTopicButton()],
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DetailScreen()),
+                );
+              },
+              child: const Text('React JS'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DetailScreen()),
+                );
+              },
+              child: const Text('Flutter 101'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const DetailScreen()),
+                );
+              },
+              child: const Text('Electron + Next js'),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class CourseTopicButton extends StatelessWidget {
-  const CourseTopicButton({super.key});
+// class CourseTopicButton extends StatelessWidget {
+//   const CourseTopicButton({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const DetailScreen()),
-        );
-      },
-      child: const Text('React JS'),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return ElevatedButton(
+//       onPressed: () {
+//         Navigator.push(
+//           context,
+//           MaterialPageRoute(builder: (context) => const DetailScreen()),
+//         );
+//       },
+//       child: const Text('React JS'),
+//     );
+//   }
+// }
