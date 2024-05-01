@@ -10,11 +10,16 @@ class CourseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Coding Category'),
-        backgroundColor: Colors.red,
+        title: const Text(
+          'Coding Category',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
       ),
       body: Container(
-        child: ListView(
+        padding: const EdgeInsets.all(20),
+        child: const Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [CourseTopicButton(), CourseTopicButton()],
         ),
       ),
@@ -31,10 +36,10 @@ class CourseTopicButton extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DetailScreen()),
+          MaterialPageRoute(builder: (context) => const DetailScreen()),
         );
       },
-      child: Text('React JS'),
+      child: const Text('React JS'),
     );
   }
 }

@@ -6,50 +6,72 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('React JS Course'),
-        centerTitle: true,
-        backgroundColor: Colors.grey,
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: <Widget>[
-            Text('react from 0 to 100'),
-            SizedBox(
-              height: 30,
+        appBar: AppBar(
+          title: const Text(
+            'React JS Course',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          centerTitle: true,
+        ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              color: Colors.brown[200],
+              padding: const EdgeInsets.all(30),
+              child: const Text('how i like my cofee...'),
             ),
-            Text('some videooo'),
-            SizedBox(
-              height: 30,
+            Container(
+              color: Colors.red[200],
+              padding: const EdgeInsets.all(30),
+              child: const Column(
+                children: [
+                  Row(
+                    children: [
+                      Text('data: '),
+                      Text('100'),
+                      Expanded(child: SizedBox()),
+                      Icon(Icons.favorite)
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Text('sugar: '),
+                      Text('300'),
+                      Expanded(child: SizedBox()),
+                      Icon(Icons.account_balance)
+                    ],
+                  )
+                ],
+              ),
             ),
-            Text('buttons & description'),
-            SizedBox(
-              height: 30,
+            Container(
+              color: Colors.yellow[200],
+              padding: const EdgeInsets.all(30),
+              child: const Text('how i like my cofee...'),
             ),
-            Text('bro help no idea how do this 🗿🗿🗿'),
-            Divider(
-              height: 60,
-              color: Colors.orange,
-            ),
-            Row(
-              children: <Widget>[
-                Icon(Icons.favorite),
-                SizedBox(
-                  width: 20,
-                ),
-                Text('test blabla'),
-                SizedBox(
-                  width: 20,
-                ),
-                ElevatedButton(
+            Container(
+              color: Colors.blue[200],
+              padding: const EdgeInsets.all(30),
+              child: Row(
+                children: [
+                  ElevatedButton(
                     onPressed: () {},
-                    child: Text('this is Enroll Course button'))
-              ],
+                    child: const Icon(Icons.favorite),
+                  ),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('Enroll Now'),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 }
