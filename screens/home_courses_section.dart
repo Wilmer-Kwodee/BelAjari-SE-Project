@@ -47,6 +47,19 @@ class HomeCourses extends StatelessWidget {
               CourseCard(icon: Icon(Icons.auto_awesome_mosaic), name: 'C++'),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CourseCard(icon: Icon(Icons.double_arrow), name: 'Flutter'),
+              SizedBox(
+                width: 20,
+              ),
+              CourseCard(icon: Icon(Icons.ac_unit), name: 'React Native'),
+            ],
+          ),
         ],
       ),
     );

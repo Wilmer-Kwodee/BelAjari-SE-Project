@@ -57,7 +57,7 @@ class TheActualContent extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Hi, John!',
+              'Hi, Wilmer!',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
