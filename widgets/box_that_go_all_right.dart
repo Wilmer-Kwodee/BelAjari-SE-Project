@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 
 class BoxThatGoAllToRight extends StatelessWidget {
   final String theParameter;
@@ -14,7 +15,7 @@ class BoxThatGoAllToRight extends StatelessWidget {
             decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.grey[200]),
+                color: Constant.GreySecondary),
             width: 300,
             child: Text(theParameter),
           ),

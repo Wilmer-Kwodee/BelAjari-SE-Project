@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_app_testing/screens/home_screen.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 import 'package:flutter_app_testing/widgets/box_that_go_all_right.dart';
 
 class LoginPage extends StatelessWidget {
@@ -83,9 +84,12 @@ class ButtonThatGoAllToRight extends StatelessWidget {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => parameter2));
             },
-            child: Text(theParameter),
+            child: Text(
+              theParameter,
+              style: TextStyle(color: Constant.SecondaryWhite),
+            ),
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
+                backgroundColor: Constant.HeroColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),

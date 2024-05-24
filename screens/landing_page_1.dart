@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_testing/screens/landing_page_2.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 
 class LandingPage1 extends StatelessWidget {
   const LandingPage1({super.key});
@@ -13,13 +14,13 @@ class LandingPage1 extends StatelessWidget {
           Container(
             child: Icon(
               Icons.menu_book_rounded,
-              color: Colors.orange,
+              color: Constant.HeroColor,
               size: 100,
             ),
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 230, 230, 230),
+              color: Constant.GreySecondary,
             ),
             width: 200,
             height: 200,
@@ -36,12 +37,17 @@ class LandingPage1 extends StatelessWidget {
             height: 30,
           ),
           ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Constant.HeroColor,
+              ),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => LandingPage2()));
               },
-              child: Text('Next')),
+              child: Text(
+                'Next',
+                style: TextStyle(color: Constant.SecondaryWhite),
+              )),
         ],
       ),
     );

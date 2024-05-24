@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_testing/screens/home_courses_section.dart';
 import 'package:flutter_app_testing/screens/home_menus.dart';
 import 'package:flutter_app_testing/screens/top_home_bar.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ][currentPageIndex],
       bottomNavigationBar: NavigationBar(
         backgroundColor: Colors.orange.shade200,
+        indicatorColor: Constant.SecondaryWhite,
         destinations: [
           NavigationDestination(
             selectedIcon: Icon(Icons.home),

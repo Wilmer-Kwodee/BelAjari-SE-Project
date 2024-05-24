@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_testing/screens/login_page.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 
 class LandingPage2 extends StatelessWidget {
   const LandingPage2({super.key});
@@ -25,13 +26,13 @@ class LandingPage2Content extends StatelessWidget {
           Container(
             child: Icon(
               Icons.tag_faces_sharp,
-              color: Colors.orange,
+              color: Constant.HeroColor,
               size: 100,
             ),
             decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(20),
-              color: const Color.fromARGB(255, 230, 230, 230),
+              color: Constant.GreySecondary,
             ),
             width: 200,
             height: 200,
@@ -56,8 +57,12 @@ class LandingPage2Content extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => LoginPage()));
             },
-            child: Text('Start Learning!'),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+            child: Text(
+              'Start Learning!',
+              style: TextStyle(color: Constant.SecondaryWhite),
+            ),
+            style:
+                ElevatedButton.styleFrom(backgroundColor: Constant.HeroColor),
           ),
         ],
       ),

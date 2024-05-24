@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_testing/utils/Constant.dart';
 import 'package:flutter_app_testing/widgets/box_that_go_all_right.dart';
 
 class TopHomeBar extends StatelessWidget {
@@ -34,7 +35,7 @@ class TheActualContent extends StatelessWidget {
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: Colors.blue,
+          color: Constant.HeroColor,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
