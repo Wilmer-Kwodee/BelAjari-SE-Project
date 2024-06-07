@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_testing/screens/landing_page_1.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_app_testing/screens/main/home_screen.dart';
+import 'package:flutter_app_testing/screens/wrapper/auth_wrapper.dart';
+import 'package:flutter_app_testing/screens/wrapper/route_wrapper.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -12,9 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: LandingPage1(),
-      ),
+      // home: HomeScreen(),
+      home: AuthWrapper(), 
+      routes: RouteWrapper.routes,
     );
   }
 }
