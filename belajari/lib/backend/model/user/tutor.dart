@@ -5,7 +5,7 @@ class Tutor {
   String introductionVideoUrl;
   String cvUrl;
   List<String> certificateUrls;
-  double balance;
+  int balance;
   List<String> serviceIds;
   String phoneNumber;
 
