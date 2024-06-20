@@ -8,12 +8,7 @@ class UserHandler {
       FirebaseFirestore firestore = FirebaseFirestore.instance;
       CollectionReference users = firestore.collection('users');
 
-      print(uid);
-      // QuerySnapshot data = await users.get();
-      // for (QueryDocumentSnapshot doc in data.docs){
-      //   print(doc.data());
-      // }
-
+  
       QuerySnapshot querySnapshot = await users.where('uid', isEqualTo: uid).get();
       print(querySnapshot.docs.first.data());
 

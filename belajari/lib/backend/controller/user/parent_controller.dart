@@ -25,7 +25,6 @@ class ParentController {
     } catch (error) {
       print('Failed to get UID: $error');
     }
-
     return null;
   }
 }

@@ -7,51 +7,54 @@ class LandingPage1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            child: Icon(
-              Icons.menu_book_rounded,
-              color: Constant.HeroColor,
-              size: 100,
-            ),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              borderRadius: BorderRadius.circular(20),
-              color: Constant.GreySecondary,
-            ),
-            width: 200,
-            height: 200,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            'Welcome to BelAjari!',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color:Constant.Black), // Adjusted font size
-          ),
-          Text(
-            'All your learning needs, in a single app.',
-            style: TextStyle(fontSize: 16, color:Constant.Black), // Adjusted font size
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Constant.HeroColor,
+    return Scaffold( // Added Scaffold
+      backgroundColor: Colors.white, // Set background color to white
+      body: Center( // Wrapped Center with Scaffold body
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              child: Icon(
+                Icons.menu_book_rounded,
+                color: Constant.HeroColor,
+                size: 100,
               ),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LandingPage2()));
-              },
-              child: Text(
-                'Next',
-                style: TextStyle(color: Constant.SecondaryWhite),
-              )),
-        ],
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(20),
+                color: Constant.GreySecondary,
+              ),
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              'Welcome to BelAjari!',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Constant.Black),
+            ),
+            Text(
+              'All your learning needs, in a single app.',
+              style: TextStyle(fontSize: 16, color: Constant.Black),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Constant.HeroColor,
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LandingPage2()));
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(color: Constant.SecondaryWhite),
+                )),
+          ],
+        ),
       ),
     );
   }
